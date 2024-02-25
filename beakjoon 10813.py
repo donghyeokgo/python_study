@@ -14,6 +14,15 @@ for p in range(M) :
     tmp[0] = basket[i-1] 
     basket[i-1] = basket[j-1]
     basket[j-1] = tmp[0]
-    # print(basket)
+
+"""
+    # 초기 바구니 상태
+baskets = list(range(1, N + 1))
+
+for _ in range(M):
+    i, j = map(int, input().split())
+    # i번 바구니와 j번 바구니의 공 교환
+    baskets[i-1], baskets[j-1] = baskets[j-1], baskets[i-1]
+"""
 
 print(*basket)
