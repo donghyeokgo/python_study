@@ -1,6 +1,11 @@
-A = []
+# https://www.acmicpc.net/problem/10810
 
-for i in range (9) :
-    A.append(int(input())) 
+N, M = map(int, input().split())
+basket = [0] * N
 
-print( max(A), A.index(max(A))+1 )
+for p in range (M) :
+    i, j, k = map(int, input().split())
+    for q in range(i-1, j) :
+        basket[q] = k
+
+print(*basket)
